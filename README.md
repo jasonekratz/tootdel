@@ -14,6 +14,22 @@ Python. __Use at your own risk.__
   Python 3 but I have only tested with 3.7 and 3.9.
 - Mastodon.py package installed via pip.
 
+## Installation
+I highly recommend not messing with whatever default python install you 
+might have and instead run this via [pipenv](https://pypi.org/project/pipenv/).
+
+1. Open a command prompt and type `pipenv`. If something comes back you 
+   should be good to go. Otherwise install pipenv.
+    1. At the same command prompt type `pip3 install pipenv`.
+    2. If for some reason that doesn't work use `python3 -m pip install pipenv`
+2. Once pipenv is installed just type `pipenv` again to make sure it runs.
+3. Either clone this repository to a folder or download `tootdel.py` and 
+   `Pipfile`
+4. From the directory in step 3 simply run `pipenv install`. This will create a 
+   new virtual environment to run the script and automatically install the 
+   Mastodon.py dependency.
+5. Configure the script as per the section below.
+
 ## Configuration
 You need to configure the following items:
 
@@ -23,7 +39,12 @@ You need to configure the following items:
     - delete anything older than this number
 - client_key, client_secret, access_token
     - these all come from your particular profile on your Mastodon server
-    
+
+## Running the script
+If you used the installation instructions above then from the directory that 
+contains the script and pipfile run the command `pipenv shell`. Then run 
+`python3 tootdel.py`. 
+
 ## Logging
 This script creates a directory called `.tootdel` in your home directory and 
 writes to a log file there when it runs.
