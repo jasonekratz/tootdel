@@ -32,12 +32,13 @@ might have and instead run this via [pipenv](https://pypi.org/project/pipenv/).
 
 ## Configuration
 The script comes with a config file pre-populated with the proper keys but 
-no values for the secret keys or base url of the server.
+no values for the secret keys or base url of the server. The items are simply
+key=value. Do not include quotes, etc.
 
 You need to configure the following items:
 
 - base_url
-    - for example https://mastodon.social
+    - for example `base_url=https://mastodon.social`
 - client_key, client_secret, access_token
     - these all come from your particular profile on your Mastodon server
 
