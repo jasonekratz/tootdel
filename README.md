@@ -31,9 +31,9 @@ might have and instead run this via [pipenv](https://pypi.org/project/pipenv/).
 5. Configure the script as per the section below.
 
 ## Configuration
-The script comes with a config file pre-populated with the proper keys but 
-no values for the secret keys or base url of the server. The items are simply
-key=value. Do not include quotes, etc.
+The script comes with a sample config file pre-populated with the proper keys 
+but no values for the secret keys or base url of the server. The items are
+simply key=value. Do not include quotes, etc.
 
 You need to configure the following items:
 
@@ -55,7 +55,8 @@ If you don't include the optional values in `tootdel.cfg` then remove them.
 
 __Note__: tootdel.cfg can either live in the same location as the script 
 file itself or inside the `.tootdel` directory that gets created in your 
-home directory.
+home directory. It is highly recommened to copy the sample config file to the 
+`.tootdel` directory to keep it separate from the script. 
 
 
 ## Running the script
