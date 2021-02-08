@@ -23,22 +23,39 @@ might have and instead run this via [pipenv](https://pypi.org/project/pipenv/).
     1. At the same command prompt type `pip3 install pipenv`.
     2. If for some reason that doesn't work use `python3 -m pip install pipenv`
 2. Once pipenv is installed just type `pipenv` again to make sure it runs.
-3. Either clone this repository to a folder or download `tootdel.py` and 
-   `Pipfile`
+3. Either clone this repository to a folder or download `tootdel.py`, `Pipfile`, 
+   and `tootdel.cfg`
 4. From the directory in step 3 simply run `pipenv install`. This will create a 
    new virtual environment to run the script and automatically install the 
    Mastodon.py dependency.
 5. Configure the script as per the section below.
 
 ## Configuration
+The script comes with a config file pre-populated with the proper keys but 
+no values for the secret keys or base url of the server.
+
 You need to configure the following items:
 
 - base_url
     - for example https://mastodon.social
-- days_to_keep
-    - delete anything older than this number
 - client_key, client_secret, access_token
     - these all come from your particular profile on your Mastodon server
+
+The following are optional:
+- days_to_keep
+    - delete anything older than this number
+    - defaults to 7 in the script
+- sleep_time
+    - number of seconds to sleep between toot deletes and between grabbing 
+      pages of toots while processing
+    - defaults to 5 seconds in the script
+    
+If you don't include the optional values in `tootdel.cfg` then remove them.
+
+__Note__: tootdel.cfg can either live in the same location as the script 
+file itself or inside the `.tootdel` directory that gets created in your 
+home directory.
+
 
 ## Running the script
 If you used the installation instructions above then from the directory that 
