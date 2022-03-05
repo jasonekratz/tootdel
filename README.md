@@ -61,8 +61,7 @@ home directory. It is highly recommened to copy the sample config file to the
 
 ## Running the script
 If you used the installation instructions above then from the directory that 
-contains the script and pipfile run the command `pipenv shell`. Then run 
-`python3 tootdel.py`. 
+contains the script and pipfile run the command `pipenv run python3 tootdel.py`. 
 
 ## Logging
 This script creates a directory called `.tootdel` in your home directory and 
