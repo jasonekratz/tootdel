@@ -18,7 +18,7 @@ if __name__ == '__main__':
     p = Path(Path.home(), Path('.tootdel'))
     p.mkdir(exist_ok=True)
 
-    config = configparser.ConfigParser({'days_to_keep': '7', 'sleep_time': '5'})
+    config = configparser.ConfigParser({'days_to_keep': '7', 'sleep_time': '60'})
     config_files = config.read([Path(p, Path('tootdel.cfg')),'tootdel.cfg',])
 
     if len(config_files) == 0:
